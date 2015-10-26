@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "2qz-Z2-GmT"; */
+"2qz-Z2-GmT.text" = "Title";
+
+/* Class = "UILabel"; text = "Springy bubbles"; ObjectID = "3d2-fZ-dx9"; */
+"3d2-fZ-dx9.text" = "Springy bubbles";
+
+/* Class = "UILabel"; text = "Outgoing avatars"; ObjectID = "9Rr-S8-Uae"; */
+"9Rr-S8-Uae.text" = "Outgoing avatars";
+
+/* Class = "UILabel"; text = "Empty view, no messages"; ObjectID = "DoU-SU-Nek"; */
+"DoU-SU-Nek.text" = "Empty view, no messages";
+
+/* Class = "UILabel"; text = "Incoming avatars"; ObjectID = "RUq-Pa-3nx"; */
+"RUq-Pa-3nx.text" = "Incoming avatars";
+
+/* Class = "UILabel"; text = "Load really long message"; ObjectID = "YV3-GH-Yul"; */
+"YV3-GH-Yul.text" = "Load really long message";
+
+/* Class = "UILabel"; text = "Load extra messages"; ObjectID = "bSS-CD-nfD"; */
+"bSS-CD-nfD.text" = "Load extra messages";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "hrw-Dp-Tor"; */
+"hrw-Dp-Tor.title" = "Settings";
+
+/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "irr-Pn-9x5"; */
+"irr-Pn-9x5.title" = "Root View Controller";
+
+/* Class = "UITableViewSection"; headerTitle = "Avatars"; ObjectID = "ns0-OO-PGu"; */
+"ns0-OO-PGu.headerTitle" = "Avatars";
+
+/* Class = "UITableViewSection"; footerTitle = "NOTE: This feature is experimental"; ObjectID = "o5m-OT-1Iw"; */
+"o5m-OT-1Iw.footerTitle" = "NOTE: This feature is experimental";
+
+/* Class = "UITableViewSection"; headerTitle = "Dynamic Behaviors"; ObjectID = "o5m-OT-1Iw"; */
+"o5m-OT-1Iw.headerTitle" = "Dynamic Behaviors";
+
+/* Class = "UITableViewSection"; headerTitle = "Messages"; ObjectID = "ygb-Dp-o4r"; */
+"ygb-Dp-o4r.headerTitle" = "Messages";
