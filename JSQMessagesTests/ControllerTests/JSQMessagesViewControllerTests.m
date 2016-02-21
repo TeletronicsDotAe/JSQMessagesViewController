@@ -82,6 +82,14 @@
     XCTAssertNotNil(demoVC.inputToolbar, @"Input toolbar should not be nil");
 }
 
+- (void)testJSQMessageViewControllerTextAlignment
+{
+    DemoMessagesViewController *demoVC = [DemoMessagesViewController messagesViewController];
+    XCTAssertEqual([demoVC alignmentForString:@"مرحبا بالعالم"], NSTextAlignmentRight);
+    XCTAssertEqual([demoVC alignmentForString:@"שלום עולם"], NSTextAlignmentRight);
+    XCTAssertEqual([demoVC alignmentForString:@"Hello World!"], NSTextAlignmentLeft);
+}
+
 - (void)testJSQMessagesViewControllerSubclassInitStoryboards
 {
     UIStoryboard *mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

@@ -465,6 +465,14 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     if (!isMediaMessage) {
         cell.textView.text = [messageItem text];
 
+        // Auto detect language and set text alignment accordingly
+        NSTextAlignment ta = NSTextAlignmentLeft;
+        if (cell.textView.text != nil)
+            ta = [self alignmentForString:cell.textView.text];
+        else if (cell.textView.attributedText != nil)
+            ta = [self alignmentForString:cell.textView.attributedText.string];
+        cell.textView.textAlignment = ta;
+        
         if ([UIDevice jsq_isCurrentDeviceBeforeiOS8]) {
             //  workaround for iOS 7 textView data detectors bug
             cell.textView.text = nil;
@@ -529,6 +537,18 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     cell.layer.shouldRasterize = YES;
 
     return cell;
+}
+
+-(NSTextAlignment)alignmentForString:(NSString *)astring
+{
+    if (astring.length) {
+        NSArray *rightLeftLanguages = @[@"ar",@"arc",@"bcc",@"bqi",@"ckb",@"dv",@"fa",@"glk",@"he",@"ku",@"mzn",@"pnb",@"ps",@"sd",@"ug",@"ur",@"yi"];
+        NSString *lang = CFBridgingRelease(CFStringTokenizerCopyBestStringLanguage((CFStringRef)astring,CFRangeMake(0,[astring length])));
+        if ([rightLeftLanguages containsObject:lang]) {
+            return NSTextAlignmentRight;
+        }
+    }
+    return NSTextAlignmentLeft;
 }
 
 - (UICollectionReusableView *)collectionView:(JSQMessagesCollectionView *)collectionView
