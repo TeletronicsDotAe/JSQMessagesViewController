@@ -942,6 +942,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				88A25F3119D8DF2500924534 /* Base */,
+				2237FC591BDDFB480095F2C0 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
