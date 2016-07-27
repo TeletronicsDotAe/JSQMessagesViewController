@@ -425,8 +425,6 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     self.toolbarHeightConstraint.constant = self.inputToolbar.preferredDefaultHeight;
     [textView.undoManager removeAllActions];
 
-    [self.inputToolbar updateSendButtonEnabledState];
-
     [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:textView];
 
     [self.collectionView.collectionViewLayout invalidateLayoutWithContext:[JSQMessagesCollectionViewFlowLayoutInvalidationContext context]];
@@ -873,8 +871,6 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     if (textView != self.inputToolbar.contentView.textView) {
         return;
     }
-
-    [self.inputToolbar updateSendButtonEnabledState];
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView
