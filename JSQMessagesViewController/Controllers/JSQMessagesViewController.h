@@ -333,4 +333,6 @@
  */
 - (NSTextAlignment)alignmentForString:(NSString *)astring;
 
+-(void) updateInputToolbarTextViewSize:(CGSize) oldSize newSize:(CGSize) newSize;
+
 @end

@@ -831,17 +831,21 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
 
             CGSize oldContentSize = [[change objectForKey:NSKeyValueChangeOldKey] CGSizeValue];
             CGSize newContentSize = [[change objectForKey:NSKeyValueChangeNewKey] CGSizeValue];
-
-            CGFloat dy = newContentSize.height - oldContentSize.height;
-
-            [self jsq_adjustInputToolbarForComposerTextViewContentSizeChange:dy];
-            [self jsq_updateCollectionViewInsets];
-            if ([self shouldScroll]) {
-                [self scrollToBottomAnimated:NO];
-            }
+            [self updateInputToolbarTextViewSize:oldContentSize newSize:newContentSize];
         }
     }
 }
+
+-(void) updateInputToolbarTextViewSize:(CGSize) oldSize newSize:(CGSize) newSize {
+    CGFloat dy = newSize.height - oldSize.height;
+    
+    [self jsq_adjustInputToolbarForComposerTextViewContentSizeChange:dy];
+    [self jsq_updateCollectionViewInsets];
+    if ([self shouldScroll]) {
+        [self scrollToBottomAnimated:NO];
+    }
+}
+
 
 #pragma mark - Keyboard controller delegate
 
