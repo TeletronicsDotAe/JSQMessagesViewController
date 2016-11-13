@@ -340,9 +340,9 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
 }
 
 - (void)finishSendingMessageAnimated:(BOOL)animated {
-
     UITextView *textView = self.inputToolbar.contentView.textView;
     textView.text = nil;
+    self.toolbarHeightConstraint.constant = self.inputToolbar.preferredDefaultHeight;
     [textView.undoManager removeAllActions];
 
     [self.inputToolbar toggleSendButtonEnabled];
