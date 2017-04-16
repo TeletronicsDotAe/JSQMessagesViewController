@@ -54,7 +54,7 @@ There are 2 approaches to this, which one you choose depends on your needs.
 1. Customize appearance and behavior of existing cells. (Easy)
 2. Provide your own completely custom cell prototypes. (Hard)
 
-> Also see [previous issues](https://github.com/jessesquires/JSQMessagesViewController/issues?utf8=✓&q=%5BCustomize+cells%5D+in%3Atitle+).
+> Also see [previous issues](https://github.com/jessesquires/JSQMessagesViewController/issues?utf8=✓&q=custom+cell+in%3Atitle).
 
 ##### (1) Customizing existing cells
 
@@ -85,6 +85,8 @@ This approach is more involved, but gives you greater flexibility. If you need t
 3. Register your cell classes/nibs with the collection view and the identifiers above
 4. Override `-collectionView: cellForItemAtIndexPath:`. Do not call `super`. Since you are providing your own cells, calling `super` will perform a bunch of unnecessary work.
 5. (Optional) For your model objects, implement `JSQMessageData` or subclass `JSQMessage` and extend to your needs.
+
+For more detailed instructions on creating custom cells, see [this comment](https://github.com/jessesquires/JSQMessagesViewController/issues/1739#issuecomment-246489889)
 
 #### *Customize your toolbar buttons?*
 ````objective-c
