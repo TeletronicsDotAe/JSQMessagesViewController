@@ -961,25 +961,12 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
 - (void)keyboardController:(JSQMessagesKeyboardController *)keyboardController keyboardDidChangeFrame:(CGRect)keyboardFrame
 {
     if (![self.inputToolbar.contentView.textView isFirstResponder] && self.toolbarBottomLayoutGuide.constant == 0.0) {
-        CGFloat heightFromBottom = CGRectGetMaxY(self.collectionView.frame);
-        heightFromBottom = MAX(0.0, heightFromBottom);
-        [self jsq_setToolbarBottomLayoutGuideConstant:heightFromBottom];
         return;
     }
 
-    if (@available(iOS 11.0, *)) {
-        CGFloat heightFromBottom = (CGRectGetMaxY(self.collectionView.frame) - CGRectGetMinY(keyboardFrame)) - self.view.safeAreaInsets.bottom;
-        
-        heightFromBottom = MAX(0.0, heightFromBottom);
-        
-        [self jsq_setToolbarBottomLayoutGuideConstant:heightFromBottom];
-    } else {
-        CGFloat heightFromBottom = CGRectGetMaxY(self.collectionView.frame) - CGRectGetMinY(keyboardFrame);
-        
-        heightFromBottom = MAX(0.0, heightFromBottom);
-        
-        [self jsq_setToolbarBottomLayoutGuideConstant:heightFromBottom];
-    }
+    CGFloat heightFromBottom = CGRectGetMaxY(self.collectionView.frame) - CGRectGetMinY(keyboardFrame);
+    heightFromBottom = MAX(0.0, heightFromBottom);
+    [self jsq_setToolbarBottomLayoutGuideConstant:heightFromBottom];
 }
 
 - (void)jsq_setToolbarBottomLayoutGuideConstant:(CGFloat)constant
