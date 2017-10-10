@@ -42,10 +42,10 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="NwZ-ju-jtF" firstAttribute="trailing" secondItem="BoD-Az-3DM" secondAttribute="trailing" id="7xc-Ha-asg"/>
-                <constraint firstItem="l9u-2b-4LK" firstAttribute="leading" secondItem="NwZ-ju-jtF" secondAttribute="leading" id="MmF-oh-Y75"/>
+                <constraint firstItem="l9u-2b-4LK" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="MmF-oh-Y75"/>
                 <constraint firstItem="NwZ-ju-jtF" firstAttribute="trailing" secondItem="l9u-2b-4LK" secondAttribute="trailing" id="O9u-TA-A0e"/>
                 <constraint firstAttribute="bottom" secondItem="l9u-2b-4LK" secondAttribute="bottom" id="Re7-WW-UmS"/>
-                <constraint firstItem="l9u-2b-4LK" firstAttribute="top" secondItem="NwZ-ju-jtF" secondAttribute="top" constant="-20" id="dCQ-DM-Wdj"/>
+                <constraint firstItem="l9u-2b-4LK" firstAttribute="top" secondItem="mUa-cS-ru4" secondAttribute="top" id="dCQ-DM-Wdj"/>
                 <constraint firstItem="NwZ-ju-jtF" firstAttribute="bottom" secondItem="BoD-Az-3DM" secondAttribute="bottom" id="rHs-6q-NX4"/>
                 <constraint firstItem="BoD-Az-3DM" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="ts7-8f-0lH"/>
             </constraints>
